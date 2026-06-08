@@ -2,8 +2,6 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 from databricks import sql
-from dotenv import load_dotenv
-import os
 
 
 # =========================
@@ -109,16 +107,15 @@ st.title("📦 Product Analytics Dashboard")
 # =========================
 # Load Data
 # =========================
-load_dotenv()
-
-@st.cache_data(ttl=(3600*24))
+@st.cache_data(ttl=3600*24)
 def load_data():
     with sql.connect(
-        server_hostname=os.getenv("DATABRICKS_HOST"),
-        http_path=os.getenv("DATABRICKS_HTTP_PATH"),
-        access_token=os.getenv("DATABRICKS_TOKEN"),
+        server_hostname=st.secrets["DATABRICKS_HOST"],
+        http_path=st.secrets["DATABRICKS_HTTP_PATH"],
+        access_token=st.secrets["DATABRICKS_TOKEN"],
     ) as conn:
-        df = pd.read_sql("SELECT * FROM products.gold.gold_products", conn)
+        query = "SELECT * FROM products.gold.gold_products"
+        df = pd.read_sql(query, conn)
     return df
 
 
