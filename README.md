@@ -49,23 +49,8 @@ Databricks SQL Warehouse → Data Extraction → Pandas DataFrame → Streamlit 
 - Clean and customizable UI  
 - Secure credential management  
 - Automated refresh pipeline  
-- Cloud deployment  
+- Cloud deployment 
 
----
-
-## 📸 Dashboard Preview
-
-Add screenshot or screen recording here
-
----
-
-## 📁 Repository Structure
-
-Product-Analysis-Dashboard-Using-with-Python-Databricks/
-├── app.py
-├── requirements.txt
-├── README.md
-└── .gitignore
 ---
 
 ## 🎯 Key Learnings
