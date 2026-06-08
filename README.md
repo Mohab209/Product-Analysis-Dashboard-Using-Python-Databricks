@@ -61,11 +61,11 @@ Add screenshot or screen recording here
 
 ## 📁 Repository Structure
 
-Product-Analysis-Dashboard/
+Product-Analysis-Dashboard-Using-with-Python-Databricks/
 ├── app.py
 ├── requirements.txt
-└── README.md
-
+├── README.md
+└── .gitignore
 ---
 
 ## 🎯 Key Learnings
